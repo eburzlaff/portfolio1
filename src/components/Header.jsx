@@ -40,18 +40,18 @@ function Header({theme, handleThemeSwitch}) {
 	);
 
     return (
-        <div className='py-4 px-8 border-b border-black dark:border-slate-600 mb-2'>
+        <div className='py-6 px-8 border-b border-black dark:border-slate-600 sticky top-0 backdrop-blur z-10'>
             <div className='max-w-[1400px] mx-auto flex flex-row items-center'>
-                <a href='/' className='flex flex-row items-center'> 
+                <a href='#home' className='flex flex-row items-center'> 
                     {theme === 'dark' ?  
                         <BsFillDatabaseFill size="2rem" color='white'/>
                     :
                         <BsFillDatabaseFill size="2rem" color='rgb(99 102 241)'/>
                     }                     
-                    <p className='text-slate-700 dark:text-slate-200 text-2xl font-bold'>EduardoDev</p>
+                    <p className='text-slate-700 dark:text-slate-200 text-2xl font-bold ml-3'>EduardoDev</p>
                 </a>
                 <ul className='flex flex-row font-semibold text-slate-700 dark:text-slate-200 ml-auto items-center'>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="">Home</a></li>
+                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#home">Home</a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#about">About Me</a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#timeline">Timeline</a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#projects">Projects</a></li>
