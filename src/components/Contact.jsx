@@ -2,7 +2,7 @@ import React from 'react';
 
 function Contact(props) {
     return (
-        <div className='contact'>
+        <div id="contact" className='pt-[100px]'>
             <h2  className='text-slate-700 dark:text-slate-200 font-bold text-5xl mb-4'>
                 Contact Me
             </h2>

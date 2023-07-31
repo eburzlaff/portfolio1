@@ -2,7 +2,7 @@ import React from 'react';
 
 function Projects(props) {
     return (
-        <div id='projects'>
+        <div id='projects' className='pt-[100px]'>
             <h2  className='text-slate-700 dark:text-slate-200 font-bold text-5xl mb-4'>
                 Projects
             </h2>
