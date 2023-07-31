@@ -1,11 +1,11 @@
 import React from 'react';
 
-function NavBar(props) {
+function About(props) {
     return (
         <div>
-            NavBar
+            About Me
         </div>
     );
 }
 
-export default NavBar;
+export default About;
