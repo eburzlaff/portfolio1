@@ -53,7 +53,7 @@ function Header({theme, handleThemeSwitch}) {
                 <ul className='flex flex-row font-semibold text-slate-700 dark:text-slate-200 ml-auto items-center'>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#home">Home</a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#about">About Me</a></li>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#timeline">Timeline</a></li>
+                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#skills">Skills</a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#projects">Projects</a></li>
                     <li className='mr-12 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#contact">Contact</a></li>
                     <li className='mr-4 text-indigo-500 dark:text-white hover:text-slate-500 dark:hover:text-sky-400'><a href="https://github.com/eburzlaff" target='_blank'><AiFillGithub size="32px"/></a></li>

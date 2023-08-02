@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import Hero from './components/Hero';
-import Timeline from './components/Timeline';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Header from './components/Header';
 import About from './components/About';
+import Skills from './components/Skills';
 
 function App() {
 
@@ -34,7 +34,7 @@ function App() {
 	}, [theme]);
 
   return (
-    <div className='min-h-screen bg-white dark:bg-slate-900'>
+    <div className='min-h-screen w-screen bg-white dark:bg-slate-900'>
       <Header handleThemeSwitch={handleThemeSwitch} theme={theme}/>
 	  <a id='home'></a>
       <div className='max-w-[1280px] mx-auto'>        
@@ -42,10 +42,10 @@ function App() {
 		<hr className='w-20 h-1 mr-auto my-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 to-sky-500 border-0 rounded md:mt-32 '/>	
         <About/>
 		<hr className='w-20 h-1 mr-auto my-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 to-sky-500 border-0 rounded md:mt-10 '/>
-        <Timeline/>
-		<hr className='w-20 h-1 mx-auto my-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 to-sky-500 border-0 rounded md:mt-10 '/>
+        <Skills/>
+		<hr className='w-20 h-1 mr-auto my-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 to-sky-500 border-0 rounded md:mt-10 '/>
         <Projects/>
-		<hr className='w-20 h-1 mx-auto my-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 to-sky-500 border-0 rounded md:mt-10 '/>
+		<hr className='w-20 h-1 mr-auto my-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 to-sky-500 border-0 rounded md:mt-10 '/>
         <Contact/>
       </div>
     </div>
