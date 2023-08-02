@@ -3,7 +3,7 @@ import BgAnimation from './BackgroundAnimation';
 
 function Hero(props) {
     return (
-        <div className='py-32'>
+        <div className='py-[100px]'>
             <div className='absolute'>
                 <h2 className='text-slate-700 dark:text-slate-200 font-bold text-7xl'>
                     Hi there, I'm <span className='text-indigo-500 dark:text-sky-400'>Eduardo</span>
@@ -17,7 +17,7 @@ function Hero(props) {
                     My projects
                 </a>
             </div>
-            {/* <div className='w-[400px] h-[200px] relative z-0 left-[500px] bottom-[55px]'><BgAnimation/></div> */}
+            <div className='w-[400px] h-[200px] relative z-0 left-[500px] bottom-[55px]'><BgAnimation/></div>
         </div>
         
     );
