@@ -3,7 +3,7 @@ import BgAnimation from './BackgroundAnimation';
 
 function Hero(props) {
     return (
-        <div className='py-[100px]'>
+        <div className='pb-[100px] pt-[200px]'>
             <div className='absolute'>
                 <h2 className='text-slate-700 dark:text-slate-200 font-bold text-7xl'>
                     Hi there, I'm <span className='text-indigo-500 dark:text-sky-400'>Eduardo</span>
