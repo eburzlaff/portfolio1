@@ -17,7 +17,7 @@ function Hero(props) {
                     My projects
                 </a>
             </div>
-            <div className='w-[400px] h-[200px] relative z-0 left-[500px] bottom-[55px]'><BgAnimation/></div>
+            {/* <div className='w-[400px] h-[200px] relative z-0 left-[500px] bottom-[55px]'><BgAnimation/></div> */}
         </div>
         
     );

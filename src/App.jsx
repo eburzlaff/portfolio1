@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Header from './components/Header';
 import About from './components/About';
 import Skills from './components/Skills';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -34,7 +35,7 @@ function App() {
 	}, [theme]);
 
   return (
-    <div className='min-h-screen w-screen bg-white dark:bg-slate-900'>
+    <div className='min-h-screen w-screen bg-white dark:bg-slate-900 overflow-hidden'>
       <Header handleThemeSwitch={handleThemeSwitch} theme={theme}/>
 	  <a id='home'></a>
       <div className='max-w-[1280px] mx-auto'>        
@@ -46,8 +47,9 @@ function App() {
 		<hr className='w-20 h-1 mr-auto my-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 to-sky-500 border-0 rounded md:mt-10 '/>
         <Projects/>
 		<hr className='w-20 h-1 mr-auto my-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 to-sky-500 border-0 rounded md:mt-10 '/>
-        <Contact/>
+        <Contact/>	
       </div>
+	  <Footer/>
     </div>
   )
 }
