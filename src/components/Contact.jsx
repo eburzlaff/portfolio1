@@ -37,7 +37,7 @@ function Contact(props) {
                         <p className='text-slate-700 dark:text-slate-300'>Check Out My Repos</p>
                     </div>
                 </a>
-                <a href="src\assets\resume.pdf" download='eburzlaff-resume.pdf' className='text-white'>
+                <a href="./assets/resume.pdf" download='eburzlaff-resume.pdf' className='text-white'>
                     <div  className='mt-6 w-[360px] p-8 border-slate-300 dark:border-slate-500 hover:border-indigo-500  dark:hover:border-sky-500 border-4 rounded'>
                         <div className='p-5 rounded flex items-center'>            
                             <FaDownload className='text-indigo-500 dark:text-sky-500 text-6xl mr-8  '/>
