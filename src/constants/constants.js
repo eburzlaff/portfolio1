@@ -1,38 +1,79 @@
 export const projects = [
     {
-      title: 'MERN Memories',
-      description: "Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.",
-        image: '/images/1.png',
-        tags: ['Mongo', 'Express', 'React', 'Node'],
-      source: 'https://google.com',
-      visit: 'https://google.com',
+      title: 'Real Estate App',
+      description: "Real Estate App that allows users to register, login, logout, view profile, view properties for rent and sale, add and unadd properties for others to see, save and unsave properties. Authentication was created with AWS Cognito. Hosted on AWS Elastic Beanstalk. Currently not deployed to avoid AWS charges. For more information, please watch the youtube demo.",
+      image: './assets/home.png',
+      technologies: ['Java', 'MySQL', 'Hibernate', 'Maven', 'Bootstrap', 'Log4J', 'AWS Elastic Beanstalk', 'AWS Cognito', 'JUnit'],
+      buttons: [
+        { text: 'See Source Code', link: 'https://github.com/eburzlaff/real-estate-app'},
+        { text: 'YT Demo', link: 'https://www.youtube.com/watch?v=eT4bvYaDSXw'}
+      ],
       id: 0,
     },
     {
-      title: 'E-Commerce',
-      description:"While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
-      image: '/images/2.png',
-      tags: ['React', 'JavaScript'],
-      source: 'https://google.com',
-      visit: 'https://google.com',
-      id: 1,
-    },
-    {
-      title: 'WebRTC App',
-      description: "This is a code repository for the corresponding YouTube video. In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.",
-        image: '/images/3.jpg',
-        tags: ['React', 'WebRTC'],
-      source: 'https://google.com',
-      visit: 'https://google.com',
-      id: 2,
-    },
-    {
-      title: 'Unichat',
-      description: "This is a code repository for the corresponding video tutorial. In this video, we will create a full Realtime Chat Application",
-      image: '/images/4.jpg',
-      tags: ['React', 'ChatEngine', 'Firebase'],
-      source: 'https://google.com',
-      visit: 'https://google.com',
-      id: 3,
-    },
+        title: 'FairExchange App',
+        description: "React Native Expo-Managed Marketplace App where users can sell things they don't want anymore. Used different libraries such as React Navigation, Expo Permissions, Expo Location, Formik, Yup and much more. 10 screen components. 20+ reusable components. Backend not implemented.",
+        image: './assets/feed.png',
+        technologies: ['React Native', 'Expo CLI'],
+        buttons: [
+          { text: 'See Source Code', link: 'https://github.com/eburzlaff/fair-exchange-app'},
+        ],
+        id: 1,
+      },
+      {
+        title: 'Team Enterprise Java',
+        description: "A library management backend API that will enable users to track their personal library. The API will support tracking books, book locations, and support tracking who has borrowed a book. We will use the Google Books API to populate supplemental book data.",
+        image: './assets/teamEnterprise.png',
+        technologies: ['Java', 'MySQL', 'Jackson', 'Google Books API', 'Hibernate', 'Maven', 'Log4J', 'AWS Elastic Beanstalk', 'JUnit', 'SwaggerHub'],
+        buttons: [
+          { text: 'See Source Code', link: 'https://github.com/eburzlaff/team-enterprise-project'},
+        ],
+        id: 2,
+      },
+      {
+        title: '"Syntax Gym" Prototype',
+        description: "Simple Figma prototype design for a fictional gym.",
+        image: './assets/syntaxGym.png',
+        technologies: ['Figma'],
+        buttons: [ 
+          { text: 'Figma Link', link: 'https://www.figma.com/proto/T2VSzdYuXX57hb0cDBKpDS/Project-2---YOUR-PROJECT-GOES-HERE?node-id=63-104&starting-point-node-id=63%3A104&mode=design&t=CEgGoZopXviSV5Yp-1'},
+          { text: 'YT Demo', link: 'https://www.youtube.com/watch?v=c_IFxNwTotM'},
+        ],
+        id: 3,
+      },
+      {
+        title: 'CineView Movie App',
+        description: "Movie App that allows users to search for their favorite movies and see their basic information such as year of release, title etc.",
+        image: './assets/darkMode.png',
+        technologies: ['ReactJS', 'Open Movie Database API (OMDb)'],
+        buttons: [
+          { text: 'See Source Code', link: 'https://github.com/eburzlaff/cine-view-movie-app'},
+          { text: 'Live Demo', link: 'https://cine-view.netlify.app/'}
+        ],
+        id: 4,
+      },
+      {
+        title: 'To do list App',
+        description: "To do list built with PHP and MySQL. Users can sign up, login, logout, add, remove and search for specific list items.",
+        image: './assets/phpTodo.png',
+        technologies: ['PHP', 'MySQL'],
+        buttons: [
+          { text: 'YT Demo', link: 'https://www.youtube.com/watch?v=ihZZ7MxV6XU'},
+        ],
+        id: 5,
+      },
+      {
+        title: 'Uncommon Munchies Bakery Website',
+        description: "Simple Bakery website. Built with HTML and CSS only.",
+        image: './assets/bakery.png',
+        technologies: ['HTML', 'CSS'],
+        buttons: [
+          { text: 'See Source Code', link: 'https://github.com/eburzlaff/spring-2020-web-dev-class-final-project'},
+          { text: 'Live Demo', link: 'https://uncommon-munchies-bakery.netlify.app/'}
+        ],
+        id: 4,
+      },
+
+
+      
   ];

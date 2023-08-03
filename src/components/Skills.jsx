@@ -57,6 +57,7 @@ function Skills(props) {
                         <li>Github</li>
                         <li>Netlify</li>
                         <li>VSCode</li>
+                        <li>Figma</li>
                         <li>Postman</li>
                         <li>IntelliJ</li>
                         <li>Vite</li>
