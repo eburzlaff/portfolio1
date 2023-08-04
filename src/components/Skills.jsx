@@ -35,7 +35,7 @@ function Skills(props) {
                     <FaCode className='mx-auto text-indigo-500 dark:text-sky-400 text-6xl'/>
                     <p className='text-2xl font-bold text-slate-700 dark:text-slate-200 mt-3 mx-auto'>Back-End</p>
                     <ul className='text-slate-700 dark:text-slate-400'>
-                        <li>Java Web Technologies <br /> (Servlet API, Tomcat, Hibernate, JAX-RS, Log4J, JUnit)</li>
+                        <li>Java Web Technologies <br /> (Servlet API, Tomcat, Maven, Hibernate, JAX-RS, Log4J, JUnit)</li>
                         <li>PHP</li>
                         <li>MySQL</li>
                         <li>NodeJS</li>
