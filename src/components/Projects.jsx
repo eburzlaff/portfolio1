@@ -4,7 +4,7 @@ import { projects } from '../constants/constants';
 
 function Projects(props) {
     return (
-        <div id='projects' className='py-[100px]'>
+        <div id='projects' className='py-[100px] flex flex-col items-center justify-between lg:items-start'>
             <h2  className='text-slate-700 dark:text-slate-200 font-bold text-5xl pb-8'>
                 Projects
             </h2>

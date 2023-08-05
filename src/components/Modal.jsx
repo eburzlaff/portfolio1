@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BsFillDatabaseFill } from "react-icons/bs";
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-import { FiMenu } from 'react-icons/fi';
-import Modal from './Modal';
 
-function Header({theme, handleThemeSwitch}) {
-
-    const [isVisible, setIsVisible] = useState(false);
+function Modal({ visible = false, setIsVisible, theme, handleThemeSwitch }) {
 
     // Light and Dark Mode Icons
     const sun = (
@@ -16,7 +12,7 @@ function Header({theme, handleThemeSwitch}) {
 			viewBox="0 0 24 24"
 			strokeWidth={1.5}
 			stroke="#0f172a"
-			className="w-[16px] h-[16px]"
+			className="w-[50px] h-[50px]"
 		>
 			<path
 				strokeLinecap="round"
@@ -33,7 +29,7 @@ function Header({theme, handleThemeSwitch}) {
 			viewBox="0 0 24 24"
 			strokeWidth={1.5}
 			stroke="white"
-			className="w-[16px] h-[16px]"
+			className="w-[50px] h-[50px]"
 		>
 			<path
 				strokeLinecap="round"
@@ -44,25 +40,28 @@ function Header({theme, handleThemeSwitch}) {
 	);
 
     return (
-        <>
-        <div className='py-6 px-8 border-b border-black dark:border-slate-600 fixed w-screen top-0 backdrop-blur z-10'>
-            <div className='max-w-[1400px] mx-auto flex flex-row items-center'>
-                <a href='#home' className='flex flex-row items-center'> 
-                    {theme === 'dark' ?  
-                        <BsFillDatabaseFill size="2rem" color='white'/>
-                    :
-                        <BsFillDatabaseFill size="2rem" color='rgb(99 102 241)'/>
-                    }                     
-                    <p className='text-slate-700 dark:text-slate-200 text-2xl font-bold ml-3'>EduardoDev</p>
-                </a>
-                <ul className='hidden lg:flex flex-row font-semibold text-slate-700 dark:text-slate-200 ml-auto items-center'>
+        <div id="modal" visible={visible} className='py-8 text-xl fixed top-0 left-0 right-0 z-20'>
+            <div className='max-w-lg mx-auto py-4 flex flex-col items-center bg-white border border-slate-900 '>
+                <div className='flex justify-between px-8 w-full'>
+                    <a href='#home' className='flex flex-row items-center mr-auto pl-4'> 
+                        {theme === 'dark' ?  
+                            <BsFillDatabaseFill size="2rem" color='black'/>
+                        :
+                            <BsFillDatabaseFill size="2rem" color='rgb(99 102 241)'/>
+                        }                     
+                        <p className='text-slate-900 text-2xl font-bold ml-3'>EduardoDev</p>
+                    </a>
+                    <button className='p-3 font-bold hover:text-indigo-500' onClick={() => setIsVisible(false)}>X</button>
+                </div>
+                
+                <ul className='font-semibold flex flex-col mt-5' onClick={() => setIsVisible(false)}>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#home">Home</a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#about">About Me</a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#skills">Skills</a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#projects">Projects</a></li>
                     <li className='mr-12 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#contact">Contact</a></li>
-                    <li className='mr-4 text-indigo-500 dark:text-white hover:text-slate-500 dark:hover:text-sky-400'><a href="https://github.com/eburzlaff" target='_blank'><AiFillGithub size="32px"/></a></li>
-                    <li className='mr-4 text-indigo-500 dark:text-white hover:text-slate-500  dark:hover:text-sky-400'><a href="https://www.linkedin.com/in/eblrb" target='_blank'><AiFillLinkedin size="32px"/></a></li>
+                    <li className='mr-4 text-indigo-500 dark:text-slate-900 hover:text-slate-500 dark:hover:text-sky-400'><a href="https://github.com/eburzlaff" target='_blank'><AiFillGithub size="4rem"/></a></li>
+                    <li className='mr-4 text-indigo-500 dark:text-slate-900 hover:text-slate-500  dark:hover:text-sky-400'><a href="https://www.linkedin.com/in/eblrb" target='_blank'><AiFillLinkedin size="4rem"/></a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'>
                         <button 
                             type="button" 
@@ -73,14 +72,10 @@ function Header({theme, handleThemeSwitch}) {
                         </button>
                     </li>
                 </ul>
-                <button className='lg:hidden ml-auto' onClick={() => {isVisible ? setIsVisible(false) : setIsVisible(true)}}>
-                    <FiMenu size="2rem" className='text-slate-700 dark:text-slate-200 hover:text-indigo-500 dark:hover:text-sky-400'/>
-                </button>
-            </div> 
+            </div>
+            
         </div>
-        {isVisible && <Modal visible={isVisible} setIsVisible={setIsVisible} theme={theme} handleThemeSwitch={handleThemeSwitch} />}
-        </>
     );
 }
 
-export default Header;
+export default Modal;

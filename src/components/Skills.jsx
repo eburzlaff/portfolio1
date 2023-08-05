@@ -7,7 +7,7 @@ import { ImMobile } from 'react-icons/im'
 
 function Skills(props) {
     return (
-        <div id='skills' className='py-[100px]'>
+        <div id='skills' className='py-[100px] flex flex-col items-center justify-between lg:items-start'>
             <h2  className='text-slate-700 dark:text-slate-200 font-bold text-5xl mb-4'>
                 Skills
             </h2>
@@ -17,7 +17,7 @@ function Skills(props) {
                 From Back-end to Front-end and Design
             </p>
 
-            <div className='flex justify-around mt-6'>
+            <div className='w-full flex flex-col justify-center lg:flex-row lg:justify-around mt-6'>
                 <div className='mt-6 text-center'>
                     <AiFillHtml5 className='mx-auto text-indigo-500 dark:text-sky-400 text-6xl'/>
                     <p className='text-2xl font-bold text-slate-700 dark:text-slate-200 mt-3'>Front-End</p>

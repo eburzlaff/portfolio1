@@ -2,7 +2,7 @@ import React from 'react';
 
 function About(props) {
     return (
-        <div id="about" className='py-[100px] flex flex-col'>
+        <div id="about" className='py-[100px] flex flex-col items-center justify-between lg:items-start'>
             <h2  className='text-slate-700 dark:text-slate-200 font-bold text-5xl mb-4'>
                 About Me
             </h2>

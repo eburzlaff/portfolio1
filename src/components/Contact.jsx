@@ -5,7 +5,7 @@ import { FaDownload } from 'react-icons/fa';
 
 function Contact(props) {
     return (
-        <div id="contact" className='py-[100px]'>
+        <div id="contact" className='py-[100px] flex flex-col items-center justify-between lg:items-start'>
             <h2  className='text-slate-700 dark:text-slate-200 font-bold text-5xl mb-4'>
                 Contact Me
             </h2>
