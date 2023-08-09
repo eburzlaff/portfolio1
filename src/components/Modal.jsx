@@ -40,7 +40,7 @@ function Modal({ visible = false, setIsVisible, theme, handleThemeSwitch }) {
 	);
 
     return (
-        <div id="modal" visible={visible} className='py-8 text-xl fixed top-0 left-0 right-0 z-2'>
+        <div id="modal" visible={visible} className='py-8 text-xl fixed top-0 left-0 right-0 z-20'>
             <div className='max-w-lg mx-auto py-4 flex flex-col items-center bg-white border border-slate-900 '>
                 <div className='flex justify-between px-8 w-full'>
                     <a href='#home' className='flex flex-row items-center mr-auto pl-4'> 
