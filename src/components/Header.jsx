@@ -45,7 +45,7 @@ function Header({theme, handleThemeSwitch}) {
 
     return (
         <>
-        <div className='py-6 px-8 border-b border-black dark:border-slate-600 fixed w-screen top-0 backdrop-blur z-10'>
+        <div className='py-6 px-8 border-b border-black dark:border-slate-600 fixed w-screen top-0 backdrop-blur z-1'>
             <div className='max-w-[1400px] mx-auto flex flex-row items-center'>
                 <a href='#home' className='flex flex-row items-center'> 
                     {theme === 'dark' ?  
