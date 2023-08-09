@@ -4,6 +4,6 @@
 
 @layer base {
     body {
-      @apply mx-auto
+      @apply m-0
     }
 }
