@@ -22,7 +22,7 @@ export const projects = [
       },
       {
         title: 'Team Enterprise Java',
-        description: "A library management backend API that will enable users to track their personal library. The API will support tracking books, book locations, and support tracking who has borrowed a book. We will use the Google Books API to populate supplemental book data.",
+        description: "A library management backend API that enables users to track their personal library. The API supports tracking books, book locations, and tracking of who has borrowed a book. We used the Google Books API to populate supplemental book data.",
         image: './assets/teamEnterprise.png',
         technologies: ['Java', 'MySQL', 'Jackson', 'Google Books API', 'Hibernate', 'Maven', 'Log4J', 'AWS Elastic Beanstalk', 'JUnit', 'SwaggerHub'],
         buttons: [
