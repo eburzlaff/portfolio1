@@ -28,6 +28,7 @@ function Skills(props) {
                         <li>ReactJS</li>
                         <li>Tailwind CSS</li>
                         <li>Bootstrap</li>
+                        <li>Sass</li>
                         <li>JSP Pages</li>
                     </ul>
                 </div>
@@ -57,6 +58,7 @@ function Skills(props) {
                         <li>Github</li>
                         <li>Netlify</li>
                         <li>VSCode</li>
+                        <li>REST APIs</li>
                         <li>Figma</li>
                         <li>Postman</li>
                         <li>IntelliJ</li>

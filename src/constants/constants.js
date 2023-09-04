@@ -1,5 +1,16 @@
 export const projects = [
     {
+      title: 'CineView 2.0 Movie App',
+      description: "Movie App that allows users to search for their favorite movies, see what is trending, popular and top rated movies. It also allows users to watch trailers and videos for specific movies. Hosted on Vercel.",
+      image: './assets/cineview2.png',
+      technologies: ['ReactJS', 'Tailwind CSS', 'Sass', 'TMDB API', 'ViteJS', 'Open Movie Database API (OMDb)', 'React-Router', 'React-Icons', 'React-Paginate', 'React-Player'],
+      buttons: [
+        { text: 'See Source Code', link: 'https://github.com/eburzlaff/cine-view-2.0-movie-app'},
+        { text: 'Live Demo', link: 'https://cine-view-2-0-movie-app.vercel.app/'}
+      ],
+      id: 0,
+    },
+    {
       title: 'Real Estate App',
       description: "Real Estate App that allows users to register, login, logout, view profile, view properties for rent and sale, add and unadd properties for others to see, save and unsave properties. Authentication was created with AWS Cognito. Hosted on AWS Elastic Beanstalk. Currently not deployed to avoid AWS charges. For more information, please watch the youtube demo.",
       image: './assets/home.png',
@@ -8,7 +19,7 @@ export const projects = [
         { text: 'See Source Code', link: 'https://github.com/eburzlaff/real-estate-app'},
         { text: 'YT Demo', link: 'https://www.youtube.com/watch?v=eT4bvYaDSXw'}
       ],
-      id: 0,
+      id: 1,
     },
     {
         title: 'FairExchange App',
@@ -18,7 +29,7 @@ export const projects = [
         buttons: [
           { text: 'See Source Code', link: 'https://github.com/eburzlaff/fair-exchange-app'},
         ],
-        id: 1,
+        id: 2,
       },
       {
         title: 'Team Enterprise Java',
@@ -28,7 +39,7 @@ export const projects = [
         buttons: [
           { text: 'See Source Code', link: 'https://github.com/eburzlaff/team-enterprise-project'},
         ],
-        id: 2,
+        id: 3,
       },
       {
         title: '"Syntax Gym" Prototype',
@@ -39,7 +50,7 @@ export const projects = [
           { text: 'Figma Link', link: 'https://www.figma.com/proto/T2VSzdYuXX57hb0cDBKpDS/Project-2---YOUR-PROJECT-GOES-HERE?node-id=63-104&starting-point-node-id=63%3A104&mode=design&t=CEgGoZopXviSV5Yp-1'},
           { text: 'YT Demo', link: 'https://www.youtube.com/watch?v=c_IFxNwTotM'},
         ],
-        id: 3,
+        id: 4,
       },
       {
         title: 'CineView Movie App',
@@ -50,7 +61,7 @@ export const projects = [
           { text: 'See Source Code', link: 'https://github.com/eburzlaff/cine-view-movie-app'},
           { text: 'Live Demo', link: 'https://cine-view.netlify.app/'}
         ],
-        id: 4,
+        id: 5,
       },
       {
         title: 'To do list App',
@@ -60,7 +71,7 @@ export const projects = [
         buttons: [
           { text: 'YT Demo', link: 'https://www.youtube.com/watch?v=ihZZ7MxV6XU'},
         ],
-        id: 5,
+        id: 6,
       },
       {
         title: 'Uncommon Munchies Bakery Website',
@@ -71,7 +82,7 @@ export const projects = [
           { text: 'See Source Code', link: 'https://github.com/eburzlaff/spring-2020-web-dev-class-final-project'},
           { text: 'Live Demo', link: 'https://uncommon-munchies-bakery.netlify.app/'}
         ],
-        id: 4,
+        id: 7,
       },
 
 
