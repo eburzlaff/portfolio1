@@ -3,7 +3,7 @@ export const projects = [
       title: 'CineView 2.0 Movie App',
       description: "Movie App that allows users to search for their favorite movies, see what is trending, popular and top rated movies. It also allows users to watch trailers and videos for specific movies. Hosted on Vercel.",
       image: './assets/cineview2.png',
-      technologies: ['ReactJS', 'Tailwind CSS', 'Sass', 'TMDB API', 'ViteJS', 'Open Movie Database API (OMDb)', 'React-Router', 'React-Icons', 'React-Paginate', 'React-Player'],
+      technologies: ['ReactJS', 'Tailwind CSS', 'Sass', 'TMDB API', 'ViteJS', 'React-Router', 'React-Icons', 'React-Paginate', 'React-Player'],
       buttons: [
         { text: 'See Source Code', link: 'https://github.com/eburzlaff/cine-view-2.0-movie-app'},
         { text: 'Live Demo', link: 'https://cine-view-2-0-movie-app.vercel.app/'}
