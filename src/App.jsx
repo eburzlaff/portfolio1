@@ -34,7 +34,7 @@ function App() {
 	}, [theme]);
 
   return (
-    <div className='min-h-screen w-screen bg-white mx-auto dark:bg-slate-900'>
+    <div className='min-h-screen w-screen bg-white mx-auto dark:bg-slate-900 overflow-hidden'>
       <Header handleThemeSwitch={handleThemeSwitch} theme={theme}/>
 	  <a id='home'></a>
       <div className='max-w-[1280px] mx-auto px-5 lg:px-0'>        
