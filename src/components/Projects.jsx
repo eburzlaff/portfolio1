@@ -1,12 +1,15 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
-import { projects } from '../constants/constants';
+import { projects_en, projects_pt } from '../constants/constants';
 import { useTranslation } from 'react-i18next';
 
 function Projects(props) {
 
     // I18n's useTranslation hook
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+
+    // Select the correct array based on language
+    const projects = i18n.language === 'pt' ? projects_pt : projects_en;
 
     return (
         <div id='projects' className='py-[100px] flex flex-col items-center justify-between lg:items-start'>
