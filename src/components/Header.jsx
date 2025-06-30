@@ -68,10 +68,10 @@ function Header({theme, handleThemeSwitch}) {
                 </a>
                 <ul className='hidden lg:flex flex-row font-semibold text-slate-700 dark:text-slate-200 ml-auto items-center'>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#home">{t('nav.home')}</a></li>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#about">About Me</a></li>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#skills">Skills</a></li>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#projects">Projects</a></li>
-                    <li className='mr-12 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#contact">Contact</a></li>
+                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#about">{t('nav.about')}</a></li>
+                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#skills">{t('nav.skills')}</a></li>
+                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#projects">{t('nav.projects')}</a></li>
+                    <li className='mr-12 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#contact">{t('nav.contact')}</a></li>
                     <li className='mr-4 text-indigo-500 dark:text-white hover:text-slate-500 dark:hover:text-sky-400'><a href="https://github.com/eburzlaff" target='_blank'><AiFillGithub size="32px"/></a></li>
                     <li className='mr-4 text-indigo-500 dark:text-white hover:text-slate-500  dark:hover:text-sky-400'><a href="https://www.linkedin.com/in/eblrb" target='_blank'><AiFillLinkedin size="32px"/></a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'>

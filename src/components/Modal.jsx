@@ -1,8 +1,18 @@
 import React from 'react';
 import { BsFillDatabaseFill } from "react-icons/bs";
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { useTranslation } from 'react-i18next';
 
 function Modal({ visible = false, setIsVisible, theme, handleThemeSwitch }) {
+
+    // I18n's useTranslation hook
+        const { t, i18n } = useTranslation();
+    
+    // Language change function
+    const handleLanguageChange = (e) => {
+        i18n.changeLanguage(e.target.value);
+        localStorage.setItem('lang', e.target.value);
+    };
 
     // Light and Dark Mode Icons
     const sun = (
@@ -55,11 +65,11 @@ function Modal({ visible = false, setIsVisible, theme, handleThemeSwitch }) {
                 </div>
                 
                 <ul className='font-semibold flex flex-col mt-5' onClick={() => setIsVisible(false)}>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#home">Home</a></li>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#about">About Me</a></li>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#skills">Skills</a></li>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#projects">Projects</a></li>
-                    <li className='mr-12 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#contact">Contact</a></li>
+                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#home">{t('nav.home')}</a></li>
+                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#about">{t('nav.about')}</a></li>
+                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#skills">{t('nav.skills')}</a></li>
+                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#projects">{t('nav.projects')}</a></li>
+                    <li className='mr-12 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#contact">{t('nav.contact')}</a></li>
                     <li className='mr-4 text-indigo-500 dark:text-slate-900 hover:text-slate-500 dark:hover:text-sky-400'><a href="https://github.com/eburzlaff" target='_blank'><AiFillGithub size="4rem"/></a></li>
                     <li className='mr-4 text-indigo-500 dark:text-slate-900 hover:text-slate-500  dark:hover:text-sky-400'><a href="https://www.linkedin.com/in/eblrb" target='_blank'><AiFillLinkedin size="4rem"/></a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'>
@@ -70,6 +80,19 @@ function Modal({ visible = false, setIsVisible, theme, handleThemeSwitch }) {
                         >
                                 {theme === 'dark' ? sun : moon}
                         </button>
+
+                        {/* Language dropdown */}
+                    <li>
+                        <select
+                            value={i18n.language}
+                            onChange={handleLanguageChange}
+                            className="bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white p-2 rounded-md border border-slate-400 dark:border-slate-500 hover:border-indigo-500 dark:hover:border-sky-400"
+                            onClick={e => e.stopPropagation()}
+                        >
+                            <option value="en">English</option>
+                            <option value="pt">Português</option>
+                        </select>
+					</li>
                     </li>
                 </ul>
             </div>
