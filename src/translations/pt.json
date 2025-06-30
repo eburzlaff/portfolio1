@@ -7,30 +7,34 @@
     "contact": "Contato"
   },
   "hero": {
-    "greeting": "Olá, eu sou o Eduardo",
-    "title": "Desenvolvedor Full-Stack",
-    "description": "Crio aplicações web modernas e de alta performance."
+    "greeting": "Olá, meu nome é",
+    "description1": "Um Desenvolvedor de software apaixonado, entusiasta em transformar ideias em realidade.",
+    "description2": "👉🚀 Explore meus projetos e conheça mais sobre mim!",
+    "button1": "Sobre Mim",
+    "button2": "Meus Projetos"
   },
   "about": {
     "title": "Sobre Mim",
-    "paragraph1": "Sou um desenvolvedor de software apaixonado por criar soluções elegantes e escaláveis.",
-    "paragraph2": "Sou especializado em React, Node.js e gosto de trabalhar no stack completo."
+    "paragraph1": "Meu nome é Eduardo, sou um recém-formado apaixonado por desenvolvimento de software. Minha jornada no mundo da programação começou em 2019, quando descobri alguns cursos online. Ao mergulhar no desenvolvimento web, fiquei completamente encantado com o processo e desenvolvi um forte interesse pela área.\n\nInicialmente, meu objetivo era seguir carreira no desenvolvimento de jogos, mas logo percebi que começar pelo desenvolvimento web era um passo inteligente — e desde então não parei mais. Meu portfólio online mostra meu progresso e diversos projetos nos quais trabalhei.\n\nQuando não estou programando, geralmente estou curtindo batalhas em jogos de luta como Street Fighter e Mortal Kombat. Assim como na arena digital, encontro alegria nos desafios, em aprender novas estratégias e melhorar constantemente minhas habilidades.\n\nEstou sempre disposto a explorar novas tecnologias, colaborar com outros desenvolvedores e contribuir em projetos empolgantes."
   },
   "skills": {
     "title": "Habilidades",
-    "frontend": "Frontend",
-    "backend": "Backend",
-    "tools": "Ferramentas e Tecnologias"
+    "description1": "Trabalhei com diversas tecnologias no mundo do desenvolvimento web e mobile.",
+    "description2": "Do Back-end ao Front-end e Design",
+    "other": "Outros"
   },
   "projects": {
     "title": "Projetos",
-    "description": "Aqui estão alguns projetos recentes em que trabalhei."
+    "description": "Aqui estão alguns dos projetos nos quais trabalhei recentemente."
   },
   "contact": {
     "title": "Fale Comigo",
-    "description": "Sinta-se à vontade para entrar em contato pelo formulário abaixo."
+    "email": "Vamos Conversar",
+    "linkedin": "Conecte-se Comigo",
+    "github": "Veja Meus Repositórios",
+    "resume": "Baixe Meu Currículo"
   },
   "footer": {
-    "text": "© 2025 Eduardo Burzlaff. Todos os direitos reservados."
+    "text": "Todos os direitos reservados."
   }
 }

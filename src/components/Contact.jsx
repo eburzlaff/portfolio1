@@ -2,12 +2,17 @@ import React from 'react';
 import { AiFillGithub, AiFillLinkedin, AiFillMail } from 'react-icons/ai';
 import { BsGithub } from 'react-icons/bs';
 import { FaDownload } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 function Contact(props) {
+
+    // I18n's useTranslation hook
+    const { t } = useTranslation();
+
     return (
         <div id="contact" className='py-[100px] flex flex-col items-center justify-between lg:items-start'>
             <h2  className='text-slate-700 dark:text-slate-200 font-bold text-5xl mb-4'>
-                Contact Me
+                {t('contact.title')}
             </h2>
             <div className='flex justify-around flex-wrap'>
                 <a href="mailto:eblrb@outlook.com" target='_blank' className=' text-white'>
@@ -16,7 +21,7 @@ function Contact(props) {
                             <AiFillMail className='text-indigo-500 dark:text-sky-500 text-6xl mr-8  '/>
                             <p className='text-slate-700 dark:text-slate-200 font-bold text-2xl'>Email</p>
                         </div>
-                        <p className='text-slate-700 dark:text-slate-300'>Let's Get In Touch</p>
+                        <p className='text-slate-700 dark:text-slate-300'>{t('contact.email')}</p>
                     </div>
                 </a>
                 <a href="https://www.linkedin.com/in/eblrb" target='_blank' className=' text-white'>
@@ -25,7 +30,7 @@ function Contact(props) {
                             <AiFillLinkedin className='text-indigo-500 dark:text-sky-500 text-6xl mr-8  '/>
                             <p className='text-slate-700 dark:text-slate-200 font-bold text-2xl'>Linkedin</p>
                         </div>
-                        <p className='text-slate-700 dark:text-slate-300'>Let's Connect</p>
+                        <p className='text-slate-700 dark:text-slate-300'>{t('contact.linkedin')}</p>
                     </div>
                 </a>
                 <a href="https://github.com/eburzlaff" target='_blank' className=' text-white'>
@@ -34,7 +39,7 @@ function Contact(props) {
                             <BsGithub className='text-indigo-500 dark:text-sky-500 text-6xl mr-8  '/>
                             <p className='text-slate-700 dark:text-slate-200 font-bold text-2xl'>Github</p>
                         </div>
-                        <p className='text-slate-700 dark:text-slate-300'>Check Out My Repos</p>
+                        <p className='text-slate-700 dark:text-slate-300'>{t('contact.github')}</p>
                     </div>
                 </a>
                 <a href="./assets/resume.pdf" download='eburzlaff-resume.pdf' className='text-white'>
@@ -43,7 +48,7 @@ function Contact(props) {
                             <FaDownload className='text-indigo-500 dark:text-sky-500 text-6xl mr-8  '/>
                             <p className='text-slate-700 dark:text-slate-200 font-bold text-2xl'>Resume</p>
                         </div>
-                        <p className='text-slate-700 dark:text-slate-300 break-all'>Download My Resume</p>
+                        <p className='text-slate-700 dark:text-slate-300 break-all'>{t('contact.resume')}</p>
                     </div>
                 </a>
             </div>

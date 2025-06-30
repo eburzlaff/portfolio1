@@ -7,20 +7,21 @@
     "contact": "Contact"
   },
   "hero": {
-    "greeting": "Hi, I'm Eduardo",
+    "greeting": "Hi there, I'm ",
     "description1": "A Passionate Software Developer, Enthusiastic about Turning Ideas into Reality",
-    "description2": "👉🚀 Explore My Projects and Discover More About Me!"
+    "description2": "👉🚀 Explore My Projects and Discover More About Me!",
+    "button1": "About Me",
+    "button2": "My projects"
   },
   "about": {
     "title": "About Me",
-    "paragraph1": "I'm a software developer with a passion for creating elegant, scalable solutions.",
-    "paragraph2": "I specialize in React, Node.js, and enjoy working across the stack."
+    "paragraph1": "My name is Eduardo, a recent college graduate with a passion for software development. My journey into the coding world began in 2019 when I stumbled upon some online courses. As I dived into web development, I found myself completely captivated by the process and developed a strong interest for it.\n\nAt first, I hoped to pursue a career in game development, but I soon realized that starting with web development was a wise move, and I haven't looked back ever since. My online portfolio showcases my progress and various projects that I've worked on.\n\nWhen I'm not coding, you'll often find me enjoying battles in fighting games like Street Fighter and Mortal Kombat. Just like in the digital arena, I find joy in the challenge, learning new strategies, and continuously improving my skills.\n\nI'm always eager to explore the latest technologies, collaborate, and contribute to exciting projects."
   },
   "skills": {
     "title": "Skills",
-    "frontend": "Frontend",
-    "backend": "Backend",
-    "tools": "Tools & Technologies"
+    "description1": "I've worked with a range of technologies in the web and mobile development world.",
+    "description2": "From Back-end to Front-end and Design",
+    "other": "Other"
   },
   "projects": {
     "title": "Projects",
@@ -28,9 +29,12 @@
   },
   "contact": {
     "title": "Contact Me",
-    "description": "Feel free to reach out via the form below."
+    "email": "Let's Get In Touch",
+    "linkedin": "Let's Connect",
+    "github": "Check Out My Repos",
+    "resume": "Download My Resume"
   },
   "footer": {
-    "text": "© 2025 Eduardo Burzlaff. All rights reserved."
+    "text": "All Rights Reserved."
   }
 }

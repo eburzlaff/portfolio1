@@ -3,18 +3,23 @@ import { AiFillHtml5 } from 'react-icons/ai';
 import { BsCodeSlash } from 'react-icons/bs';
 import { FaCode, FaTools } from 'react-icons/fa'
 import { ImMobile } from 'react-icons/im'
+import { useTranslation } from 'react-i18next';
 
 
 function Skills(props) {
+
+     // I18n's useTranslation hook
+    const { t } = useTranslation();
+
     return (
         <div id='skills' className='py-[100px] flex flex-col items-center justify-between lg:items-start'>
             <h2  className='text-slate-700 dark:text-slate-200 font-bold text-5xl mb-4'>
-                Skills
+                {t('skills.title')}
             </h2>
             <p className='text-slate-700 dark:text-slate-400 text-xl mt-6'>
-                I've worked with a range of technologies in the web and mobile development world.
+                {t('skills.description1')}
                 <br/>
-                From Back-end to Front-end and Design
+                {t('skills.description2')}
             </p>
 
             <div className='w-full flex flex-col justify-center lg:flex-row lg:justify-around mt-6'>
@@ -52,7 +57,7 @@ function Skills(props) {
                 </div>
                 <div className='mt-6 text-center'>
                     <FaTools className='mx-auto text-indigo-500 dark:text-sky-400 text-6xl'/>
-                    <p className='text-2xl font-bold text-slate-700 dark:text-slate-200 mt-3'>Other</p>
+                    <p className='text-2xl font-bold text-slate-700 dark:text-slate-200 mt-3'>{t('skills.other')}</p>
                     <ul className='text-slate-700 dark:text-slate-400'>
                         <li>Git</li>
                         <li>Github</li>
