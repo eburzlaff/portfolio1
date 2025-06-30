@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Eduardo",
+    "title": "Full-Stack Developer",
+    "description": "I build modern and performant web applications."
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I'm a software developer with a passion for creating elegant, scalable solutions.",
+    "paragraph2": "I specialize in React, Node.js, and enjoy working across the stack."
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools & Technologies"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Here are some of the projects I've worked on recently."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "Feel free to reach out via the form below."
+  },
+  "footer": {
+    "text": "© 2025 Eduardo Burzlaff. All rights reserved."
+  }
+}

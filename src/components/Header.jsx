@@ -3,8 +3,19 @@ import { BsFillDatabaseFill } from "react-icons/bs";
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FiMenu } from 'react-icons/fi';
 import Modal from './Modal';
+import { useTranslation } from 'react-i18next';
+
 
 function Header({theme, handleThemeSwitch}) {
+
+    // I18n's useTranslation hook
+    const { t, i18n } = useTranslation();
+
+    // Language change function
+    const handleLanguageChange = (e) => {
+		i18n.changeLanguage(e.target.value);
+		localStorage.setItem('lang', e.target.value);
+	};
 
     const [isVisible, setIsVisible] = useState(false);
 
@@ -56,7 +67,7 @@ function Header({theme, handleThemeSwitch}) {
                     <p className='text-slate-700 dark:text-slate-200 text-2xl font-bold ml-3'>EduardoDev</p>
                 </a>
                 <ul className='hidden lg:flex flex-row font-semibold text-slate-700 dark:text-slate-200 ml-auto items-center'>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#home">Home</a></li>
+                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#home">{t('nav.home')}</a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#about">About Me</a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#skills">Skills</a></li>
                     <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#projects">Projects</a></li>
@@ -72,6 +83,19 @@ function Header({theme, handleThemeSwitch}) {
                                 {theme === 'dark' ? sun : moon}
                         </button>
                     </li>
+
+                    {/* Language dropdown */}
+                    <li>
+                        <select
+                            value={i18n.language}
+                            onChange={handleLanguageChange}
+                            className="bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white p-2 rounded-md border border-slate-400 dark:border-slate-500 hover:border-indigo-500 dark:hover:border-sky-400"
+                        >
+                            <option value="en">English</option>
+                            <option value="pt">Português</option>
+                        </select>
+					</li>
+
                 </ul>
                 <button className='lg:hidden ml-auto' onClick={() => {isVisible ? setIsVisible(false) : setIsVisible(true)}}>
                     <FiMenu size="2rem" className='text-slate-700 dark:text-slate-200 hover:text-indigo-500 dark:hover:text-sky-400'/>
