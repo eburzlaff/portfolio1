@@ -50,8 +50,8 @@ function Modal({ visible = false, setIsVisible, theme, handleThemeSwitch }) {
 	);
 
     return (
-        <div id="modal" visible={visible} className='py-8 text-xl fixed top-0 left-0 right-0 z-20'>
-            <div className='max-w-lg mx-auto py-4 flex flex-col items-center bg-white border border-slate-900 '>
+        <div id="modal" visible={visible} className='inset-0 py-8 text-xl fixed top-0 left-0 right-0 z-20 overflow-y-auto' onClick={() => setIsVisible(false)}>
+            <div className='max-w-lg mx-auto py-4 flex flex-col items-center bg-white border border-slate-900 ' >
                 <div className='flex justify-between px-8 w-full'>
                     <a href='#home' className='flex flex-row items-center mr-auto pl-4'> 
                         {theme === 'dark' ?  
@@ -64,36 +64,38 @@ function Modal({ visible = false, setIsVisible, theme, handleThemeSwitch }) {
                     <button className='p-3 font-bold hover:text-indigo-500' onClick={() => setIsVisible(false)}>X</button>
                 </div>
                 
-                <ul className='font-semibold flex flex-col mt-5' onClick={() => setIsVisible(false)}>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#home">{t('nav.home')}</a></li>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#about">{t('nav.about')}</a></li>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#skills">{t('nav.skills')}</a></li>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#projects">{t('nav.projects')}</a></li>
-                    <li className='mr-12 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#contact">{t('nav.contact')}</a></li>
-                    <li className='mr-4 text-indigo-500 dark:text-slate-900 hover:text-slate-500 dark:hover:text-sky-400'><a href="https://github.com/eburzlaff" target='_blank'><AiFillGithub size="4rem"/></a></li>
-                    <li className='mr-4 text-indigo-500 dark:text-slate-900 hover:text-slate-500  dark:hover:text-sky-400'><a href="https://www.linkedin.com/in/eblrb" target='_blank'><AiFillLinkedin size="4rem"/></a></li>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'>
-                        <button 
-                            type="button" 
-                            onClick={handleThemeSwitch} 
-                            className="bg-slate-800 dark:bg-orange-300 hover:bg-slate-500 dark:hover:bg-sky-400 text-lg p-2 rounded-md"
-                        >
-                                {theme === 'dark' ? sun : moon}
-                        </button>
-
-                        {/* Language dropdown */}
-                    <li>
+                <ul className='w-full font-semibold flex flex-col items-center text-center text-white mt-5' onClick={() => setIsVisible(false)}>
+                    <li className='w-full mb-1'><a href="#home" className='w-full block px-4 py-8 bg-indigo-500 dark:bg-slate-700 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.home')}</a></li>
+                    <li className='w-full mb-1'><a href="#about" className='w-full block px-4 py-8 bg-indigo-500 dark:bg-slate-700 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.about')}</a></li>
+                    <li className='w-full mb-1'><a href="#skills" className='w-full block px-4 py-8 bg-indigo-500 dark:bg-slate-700 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.skills')}</a></li>
+                    <li className='w-full mb-1'><a href="#projects" className='w-full block px-4 py-8 bg-indigo-500 dark:bg-slate-700 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.projects')}</a></li>
+                    <li className='w-full mb-1'><a href="#contact" className='w-full block px-4 py-8 bg-indigo-500 dark:bg-slate-700 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.contact')}</a></li>
+                    <li className='w-full mb-1 bg-indigo-500 dark:bg-slate-700'><a href="https://github.com/eburzlaff" target='_blank' className='flex justify-center items-center w-full px-4 py-4 text-white dark:text-white hover:text-slate-500 dark:hover:text-sky-400'><AiFillGithub size="4rem"/></a></li>
+                    <li className='w-full mb-1 bg-indigo-500 dark:bg-slate-700'><a href="https://www.linkedin.com/in/eblrb" target='_blank' className='flex justify-center items-center w-full px-4 py-4 text-white dark:text-white hover:text-slate-500 dark:hover:text-sky-400'><AiFillLinkedin size="4rem"/></a></li>
+                    
+                    {/* Language dropdown */}
+                    <li className='w-full mb-1'>
                         <select
                             value={i18n.language}
                             onChange={handleLanguageChange}
-                            className="bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white p-2 rounded-md border border-slate-400 dark:border-slate-500 hover:border-indigo-500 dark:hover:border-sky-400"
+                            className="w-full text-5xl text-center bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white py-2 border border-slate-400 dark:border-slate-500 hover:border-indigo-500 dark:hover:border-sky-400"
                             onClick={e => e.stopPropagation()}
                         >
                             <option value="en">English</option>
                             <option value="pt">Português</option>
                         </select>
 					</li>
+                    
+                    <li className='w-full mb-1 bg-slate-800 dark:bg-orange-300 hover:text-indigo-500 dark:hover:text-sky-400'>
+                        <button 
+                            type="button" 
+                            onClick={handleThemeSwitch} 
+                            className="w-full flex justify-center py-4 bg-slate-800 dark:bg-orange-300 hover:bg-slate-500 dark:hover:bg-sky-400 text-lg p-2 rounded-md"
+                        >
+                                {theme === 'dark' ? sun : moon}
+                        </button>
                     </li>
+                    
                 </ul>
             </div>
             
