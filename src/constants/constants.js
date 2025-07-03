@@ -24,7 +24,7 @@ export const projects_en = [
     {
         title: 'FairExchange App',
         description: "React Native Expo-Managed Marketplace App where users can sell things they don't want anymore. Used different libraries such as React Navigation, Expo Permissions, Expo Location, Formik, Yup and much more. 10 screen components. 20+ reusable components. Backend not implemented.",
-        image: './assets/feed.png',
+        image: './assets/fairExchange.png',
         technologies: ['React Native', 'Expo CLI'],
         buttons: [
           { text: 'See Source Code', link: 'https://github.com/eburzlaff/fair-exchange-app'},
@@ -116,7 +116,7 @@ export const projects_pt = [
         title: 'FairExchange App',
         description:
           'Aplicativo de marketplace feito com React Native (Expo) onde usuários podem vender coisas que não querem mais. Usou diversas bibliotecas como React Navigation, Expo Permissions, Expo Location, Formik, Yup e muito mais. 10 componentes de tela. Mais de 20 componentes reutilizáveis. Backend não implementado.',
-        image: './assets/feed.png',
+        image: './assets/fairExchange.png',
         technologies: ['React Native', 'Expo CLI'],
         buttons: [{ text: 'Ver Código Fonte', link: 'https://github.com/eburzlaff/fair-exchange-app' }],
         id: 2
