@@ -33,7 +33,8 @@
     "email": "Vamos Conversar",
     "linkedin": "Conecte-se Comigo",
     "github": "Veja Meus Repositórios",
-    "resume": "Baixe Meu Currículo"
+    "resumeTitle": "Currículo",
+    "resumeDescription": "Baixe Meu Currículo"
   },
   "footer": {
     "text": "Todos os direitos reservados."

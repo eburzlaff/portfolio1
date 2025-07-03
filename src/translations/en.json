@@ -33,7 +33,8 @@
     "email": "Let's Get In Touch",
     "linkedin": "Let's Connect",
     "github": "Check Out My Repos",
-    "resume": "Download My Resume"
+    "resumeTitle": "Resume",
+    "resumeDescription": "Download My Resume"
   },
   "footer": {
     "text": "All Rights Reserved."

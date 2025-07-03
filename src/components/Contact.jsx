@@ -50,9 +50,9 @@ function Contact(props) {
                     <div  className='mt-6 w-[300px] sm:w-[360px] p-8 border-slate-300 dark:border-slate-500 hover:border-indigo-500  dark:hover:border-sky-500 border-4 rounded'>
                         <div className='p-5 rounded flex items-center'>            
                             <FaDownload className='text-indigo-500 dark:text-sky-500 text-6xl mr-8  '/>
-                            <p className='text-slate-700 dark:text-slate-200 font-bold text-2xl'>Resume</p>
+                            <p className='text-slate-700 dark:text-slate-200 font-bold text-2xl'>{t('contact.resumeTitle')}</p>
                         </div>
-                        <p className='text-slate-700 dark:text-slate-300 break-all'>{t('contact.resume')}</p>
+                        <p className='text-slate-700 dark:text-slate-300 break-all'>{t('contact.resumeDescription')}</p>
                     </div>
                 </a>
             </div>
