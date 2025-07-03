@@ -7,7 +7,11 @@ import { useTranslation } from 'react-i18next';
 function Contact(props) {
 
     // I18n's useTranslation hook
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+
+    // Choose the appropriate resume file
+    const resumeFile = i18n.language === 'pt' ? 'resume-pt.pdf' : 'resume-en.pdf';
+    const downloadName = i18n.language === 'pt' ? 'eburzlaff-curriculo.pdf' : 'eburzlaff-resume.pdf';
 
     return (
         <div id="contact" className='py-[100px] flex flex-col items-center justify-between lg:items-start'>
@@ -42,7 +46,7 @@ function Contact(props) {
                         <p className='text-slate-700 dark:text-slate-300'>{t('contact.github')}</p>
                     </div>
                 </a>
-                <a href="./assets/resume.pdf" download='eburzlaff-resume.pdf' className='text-white'>
+                <a href={`/assets/${resumeFile}`} download={downloadName} className='text-white'>
                     <div  className='mt-6 w-[300px] sm:w-[360px] p-8 border-slate-300 dark:border-slate-500 hover:border-indigo-500  dark:hover:border-sky-500 border-4 rounded'>
                         <div className='p-5 rounded flex items-center'>            
                             <FaDownload className='text-indigo-500 dark:text-sky-500 text-6xl mr-8  '/>
