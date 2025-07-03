@@ -1,6 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function ProjectCard({title, description, image, technologies, buttons, id}) {
+
+    // I18n's useTranslation hook
+    const { t } = useTranslation();
 
     return (
         <div key={id} className="max-w-lg rounded overflow-hidden shadow-2xl border border-slate-300 dark:border-slate-500 mb-4">
@@ -13,7 +17,7 @@ function ProjectCard({title, description, image, technologies, buttons, id}) {
                         </p>
                     </div>
                     <div className="px-6 pt-4 pb-2">
-                        <span className='text-xl text-slate-700 dark:text-slate-200'>Technologies: </span>
+                        <span className='text-xl text-slate-700 dark:text-slate-200'>{t('projects.technologies')} </span>
                         {technologies.map(tech => (
                             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tech}</span>
                         ))}

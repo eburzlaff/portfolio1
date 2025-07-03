@@ -25,7 +25,8 @@
   },
   "projects": {
     "title": "Projetos",
-    "description": "Aqui estão alguns dos projetos nos quais trabalhei recentemente."
+    "description": "Aqui estão alguns dos projetos nos quais trabalhei recentemente.",
+    "technologies": "Tecnologias: "
   },
   "contact": {
     "title": "Fale Comigo",

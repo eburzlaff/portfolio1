@@ -25,7 +25,8 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "Here are some of the projects I've worked on recently."
+    "description": "Here are some of the projects I've worked on recently.",
+    "technologies": "Technologies: "
   },
   "contact": {
     "title": "Contact Me",
