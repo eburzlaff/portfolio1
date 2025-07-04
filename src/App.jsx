@@ -14,15 +14,24 @@ function App() {
   const [theme, setTheme] = useState("dark");
 
 	useEffect(() => {
-		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			setTheme('dark');
+
+		// On initial load, check for saved theme or system preference
+		const storedTheme = localStorage.getItem("theme");
+
+		if (storedTheme) {
+			setTheme(storedTheme);
+		} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			setTheme('dark');	
 		} else {
 			setTheme('light');
 		}
 	}, []);
 
 	const handleThemeSwitch = () => {
-		setTheme(theme === 'dark' ? 'light' : 'dark');
+		const newTheme = theme === "dark" ? "light" : "dark";
+		setTheme(newTheme);
+		// Save the new theme to localStorage
+		localStorage.setItem("theme", newTheme);
 	};
 
 	useEffect(() => {
