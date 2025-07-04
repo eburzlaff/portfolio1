@@ -15,7 +15,9 @@ Personal web portfolio showcasing my skills, projects, and contact information. 
 
 ## Screenshots  
 <div>  
-  <img src="public/assets/portfolio.png" alt="Portfolio Screenshot" style="width:2000px;" />  
+  <img src="public/assets/portfolio.png" alt="Portfolio Screenshot" style="width:2000px;" /> <br>
+  <img src="public/assets/portfolioLight.png" alt="Portfolio Screenshot" style="width:2000px;" />
+
 </div>  
 
 ## Setup  
