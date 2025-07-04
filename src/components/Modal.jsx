@@ -1,6 +1,7 @@
 import React from 'react';
 import { BsFillDatabaseFill } from "react-icons/bs";
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { FaWindowClose } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
 
 function Modal({ visible = false, setIsVisible, theme, handleThemeSwitch }) {
@@ -51,46 +52,51 @@ function Modal({ visible = false, setIsVisible, theme, handleThemeSwitch }) {
 
     return (
         <div id="modal" visible={visible} className='inset-0 py-8 text-xl fixed top-0 left-0 right-0 z-20 overflow-y-auto' onClick={() => setIsVisible(false)}>
-            <div className='max-w-lg mx-auto py-4 flex flex-col items-center bg-white border border-slate-900 ' >
+            <div className='max-w-lg mx-auto py-4 flex flex-col items-center bg-white border border-slate-900 rounded' >
                 <div className='flex justify-between px-8 w-full'>
                     <a href='#home' className='flex flex-row items-center mr-auto pl-4'> 
                         {theme === 'dark' ?  
-                            <BsFillDatabaseFill size="2rem" color='black'/>
+                            <BsFillDatabaseFill size="2rem" className='text-slate-900'/>
                         :
                             <BsFillDatabaseFill size="2rem" color='rgb(99 102 241)'/>
                         }                     
                         <p className='text-slate-900 text-2xl font-bold ml-3'>EduardoDev</p>
                     </a>
-                    <button className='p-3 font-bold hover:text-indigo-500' onClick={() => setIsVisible(false)}>X</button>
+                    <button className='p-3 font-bold hover:text-indigo-500' onClick={() => setIsVisible(false)}><FaWindowClose className="text-red-500 bg-white hover:bg-slate-300 w-12 h-12 p-1"/></button>
                 </div>
                 
                 <ul className='w-full font-semibold flex flex-col items-center text-center text-white mt-5' onClick={() => setIsVisible(false)}>
-                    <li className='w-full mb-1'><a href="#home" className='w-full block px-4 py-8 bg-indigo-500 dark:bg-slate-700 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.home')}</a></li>
-                    <li className='w-full mb-1'><a href="#about" className='w-full block px-4 py-8 bg-indigo-500 dark:bg-slate-700 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.about')}</a></li>
-                    <li className='w-full mb-1'><a href="#skills" className='w-full block px-4 py-8 bg-indigo-500 dark:bg-slate-700 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.skills')}</a></li>
-                    <li className='w-full mb-1'><a href="#projects" className='w-full block px-4 py-8 bg-indigo-500 dark:bg-slate-700 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.projects')}</a></li>
-                    <li className='w-full mb-1'><a href="#contact" className='w-full block px-4 py-8 bg-indigo-500 dark:bg-slate-700 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.contact')}</a></li>
-                    <li className='w-full mb-1 bg-indigo-500 dark:bg-slate-700'><a href="https://github.com/eburzlaff" target='_blank' className='flex justify-center items-center w-full px-4 py-4 text-white dark:text-white hover:text-slate-500 dark:hover:text-sky-400'><AiFillGithub size="4rem"/></a></li>
-                    <li className='w-full mb-1 bg-indigo-500 dark:bg-slate-700'><a href="https://www.linkedin.com/in/eblrb" target='_blank' className='flex justify-center items-center w-full px-4 py-4 text-white dark:text-white hover:text-slate-500 dark:hover:text-sky-400'><AiFillLinkedin size="4rem"/></a></li>
+                    <li className='w-full mb-1'><a href="#home" className='mx-2 block px-4 py-8 border rounded bg-indigo-500 dark:bg-slate-900 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.home')}</a></li>
+                    <li className='w-full mb-1'><a href="#about" className='mx-2 block px-4 py-8 border-2 rounded border-indigo-500 dark:border-none text-indigo-500 dark:text-white dark:bg-slate-700 hover:border-slate-500 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.about')}</a></li>
+                    <li className='w-full mb-1'><a href="#skills" className='mx-2 block px-4 py-8 border rounded bg-indigo-500 dark:bg-slate-900 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.skills')}</a></li>
+                    <li className='w-full mb-1'><a href="#projects" className='mx-2 block px-4 py-8 border-2 rounded border-indigo-500 dark:border-none text-indigo-500 dark:text-white dark:bg-slate-700 hover:border-slate-500 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.projects')}</a></li>
+                    <li className='w-full mb-1'><a href="#contact" className='mx-2 block px-4 py-8 border rounded bg-indigo-500 dark:bg-slate-900 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.contact')}</a></li>
+                    <li className='w-full mb-1 border-x-[8px] border-white bg-white dark:bg-slate-700 rounded dark:rounded-2xl'><a href="https://github.com/eburzlaff" target='_blank' className='flex justify-center items-center px-4 py-4 border-2 border-indigo-500 dark:border-slate-700 rounded dark:rounded-lg hover:border-slate-500  dark:hover:bg-slate-800 text-indigo-500 dark:text-white hover:text-slate-500 dark:hover:text-sky-400'><AiFillGithub size="4rem"/></a></li>
+                    <li className='w-full mb-2 border-x-[8px] border-white bg-indigo-500 dark:bg-slate-900 rounded-2xl'><a href="https://www.linkedin.com/in/eblrb" target='_blank' className='flex justify-center items-center px-4 py-4 border-2 border-indigo-500 rounded dark:border-slate-900 bg-indigo-500 dark:bg-slate-900 text-white dark:text-white hover:bg-indigo-800 dark:hover:bg-slate-800 hover:text-slate-500 dark:hover:text-sky-400'><AiFillLinkedin size="4rem"/></a></li>
                     
                     {/* Language dropdown */}
-                    <li className='w-full mb-1'>
-                        <select
-                            value={i18n.language}
-                            onChange={handleLanguageChange}
-                            className="w-full text-5xl text-center bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-white py-2 border border-slate-400 dark:border-slate-500 hover:border-indigo-500 dark:hover:border-sky-400"
-                            onClick={e => e.stopPropagation()}
-                        >
-                            <option value="en">English</option>
-                            <option value="pt">Português</option>
-                        </select>
+                    <li className='w-full mb-2'>
+                        <div className='border-2 border-white mx-2'>
+                            <select
+                                value={i18n.language}
+                                onChange={handleLanguageChange}
+                                className="w-full border-2 rounded border-indigo-500 dark:border-none text-4xl text-center bg-white dark:bg-slate-700 text-indigo-500 dark:text-white py-2"
+                                onClick={e => e.stopPropagation()}
+                            >
+                                <option value="en">English</option>
+                                <option value="pt">Português</option>
+                            </select>
+                        </div>
 					</li>
                     
-                    <li className='w-full mb-1 bg-slate-800 dark:bg-orange-300 hover:text-indigo-500 dark:hover:text-sky-400'>
+                    <li className='w-full mb-1 px-2'>
                         <button 
                             type="button" 
-                            onClick={handleThemeSwitch} 
-                            className="w-full flex justify-center py-4 bg-slate-800 dark:bg-orange-300 hover:bg-slate-500 dark:hover:bg-sky-400 text-lg p-2 rounded-md"
+                            onClick={e => {
+                                e.stopPropagation();
+                                handleThemeSwitch();
+                            }}
+                            className="w-full border-slate-800 rounded dark:border-orange-300 flex justify-center py-4 bg-slate-800 dark:bg-orange-300 hover:bg-slate-500 dark:hover:bg-sky-400 text-lg"
                         >
                                 {theme === 'dark' ? sun : moon}
                         </button>
