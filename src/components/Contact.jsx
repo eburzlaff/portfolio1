@@ -19,7 +19,7 @@ function Contact(props) {
                 {t('contact.title')}
             </h2>
             <div className='flex justify-around flex-wrap'>
-                <a href="mailto:eblrb@outlook.com" target='_blank' className=' text-white'>
+                <a href="mailto:du.di.99@hotmail.com" target='_blank' className=' text-white'>
                     <div  className='mt-6 p-8 w-[300px] sm:w-[360px] border-slate-300 dark:border-slate-500 hover:border-indigo-500  dark:hover:border-sky-500 border-4 rounded transition-colors duration-500 ease-in-out'>
                         <div className='p-5 rounded flex items-center'>            
                             <AiFillMail className='text-indigo-500 dark:text-sky-500 text-6xl mr-8  '/>
