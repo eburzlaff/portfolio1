@@ -51,8 +51,8 @@ function Modal({ visible = false, setIsVisible, theme, handleThemeSwitch }) {
 	);
 
     return (
-        <div id="modal" visible={visible} className='inset-0 py-8 text-xl fixed top-0 left-0 right-0 z-20 overflow-y-auto' onClick={() => setIsVisible(false)}>
-            <div className='max-w-lg mx-auto py-4 flex flex-col items-center bg-white border border-slate-900 rounded' >
+        <div id="modal" className={`inset-0 py-8 text-xl fixed top-0 left-0 right-0 z-20 overflow-y-auto transition-all duration-700 ease-in-out ${visible ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'}`} onClick={() => setIsVisible(false)}>
+            <div className={`max-w-lg mx-auto py-4 flex flex-col items-center bg-white border border-slate-900 rounded transition-all duration-700 ease-in-out transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`} >
                 <div className='flex justify-between px-8 w-full'>
                     <a href='#home' className='flex flex-row items-center mr-auto pl-4'> 
                         {theme === 'dark' ?  
@@ -66,13 +66,13 @@ function Modal({ visible = false, setIsVisible, theme, handleThemeSwitch }) {
                 </div>
                 
                 <ul className='w-full font-semibold flex flex-col items-center text-center text-white mt-5' onClick={() => setIsVisible(false)}>
-                    <li className='w-full mb-1'><a href="#home" className='mx-2 block px-4 py-8 border rounded bg-indigo-500 dark:bg-slate-900 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.home')}</a></li>
-                    <li className='w-full mb-1'><a href="#about" className='mx-2 block px-4 py-8 border-2 rounded border-indigo-500 dark:border-none text-indigo-500 dark:text-white dark:bg-slate-700 hover:border-slate-500 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.about')}</a></li>
-                    <li className='w-full mb-1'><a href="#skills" className='mx-2 block px-4 py-8 border rounded bg-indigo-500 dark:bg-slate-900 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.skills')}</a></li>
-                    <li className='w-full mb-1'><a href="#projects" className='mx-2 block px-4 py-8 border-2 rounded border-indigo-500 dark:border-none text-indigo-500 dark:text-white dark:bg-slate-700 hover:border-slate-500 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.projects')}</a></li>
-                    <li className='w-full mb-1'><a href="#contact" className='mx-2 block px-4 py-8 border rounded bg-indigo-500 dark:bg-slate-900 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800'>{t('nav.contact')}</a></li>
-                    <li className='w-full mb-1 border-x-[8px] border-white bg-white dark:bg-slate-700 rounded dark:rounded-2xl'><a href="https://github.com/eburzlaff" target='_blank' className='flex justify-center items-center px-4 py-4 border-2 border-indigo-500 dark:border-slate-700 rounded dark:rounded-lg hover:border-slate-500  dark:hover:bg-slate-800 text-indigo-500 dark:text-white hover:text-slate-500 dark:hover:text-sky-400'><AiFillGithub size="4rem"/></a></li>
-                    <li className='w-full mb-2 border-x-[8px] border-white bg-indigo-500 dark:bg-slate-900 rounded-2xl'><a href="https://www.linkedin.com/in/eblrb" target='_blank' className='flex justify-center items-center px-4 py-4 border-2 border-indigo-500 rounded dark:border-slate-900 bg-indigo-500 dark:bg-slate-900 text-white dark:text-white hover:bg-indigo-800 dark:hover:bg-slate-800 hover:text-slate-500 dark:hover:text-sky-400'><AiFillLinkedin size="4rem"/></a></li>
+                    <li className='w-full mb-1'><a href="#home" className='mx-2 block px-4 py-8 border rounded bg-indigo-500 dark:bg-slate-900 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800 transition-colors duration-500 ease-in-out'>{t('nav.home')}</a></li>
+                    <li className='w-full mb-1'><a href="#about" className='mx-2 block px-4 py-8 border-2 rounded border-indigo-500 dark:border-none text-indigo-500 dark:text-white dark:bg-slate-700 hover:border-slate-500 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800 transition-colors duration-500 ease-in-out'>{t('nav.about')}</a></li>
+                    <li className='w-full mb-1'><a href="#skills" className='mx-2 block px-4 py-8 border rounded bg-indigo-500 dark:bg-slate-900 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800 transition-colors duration-500 ease-in-out'>{t('nav.skills')}</a></li>
+                    <li className='w-full mb-1'><a href="#projects" className='mx-2 block px-4 py-8 border-2 rounded border-indigo-500 dark:border-none text-indigo-500 dark:text-white dark:bg-slate-700 hover:border-slate-500 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800 transition-colors duration-500 ease-in-out'>{t('nav.projects')}</a></li>
+                    <li className='w-full mb-1'><a href="#contact" className='mx-2 block px-4 py-8 border rounded bg-indigo-500 dark:bg-slate-900 hover:bg-indigo-800 hover:text-slate-500 dark:hover:text-slate-400 dark:hover:bg-slate-800 transition-colors duration-500 ease-in-out'>{t('nav.contact')}</a></li>
+                    <li className='w-full mb-1 border-x-[8px] border-white bg-white dark:bg-slate-700 rounded dark:rounded-2xl'><a href="https://github.com/eburzlaff" target='_blank' className='flex justify-center items-center px-4 py-4 border-2 border-indigo-500 dark:border-slate-700 rounded dark:rounded-lg hover:border-slate-500  dark:hover:bg-slate-800 text-indigo-500 dark:text-white hover:text-slate-500 dark:hover:text-sky-400 transition-colors duration-500 ease-in-out'><AiFillGithub size="4rem"/></a></li>
+                    <li className='w-full mb-2 border-x-[8px] border-white bg-indigo-500 dark:bg-slate-900 rounded-2xl'><a href="https://www.linkedin.com/in/eblrb" target='_blank' className='flex justify-center items-center px-4 py-4 border-2 border-indigo-500 rounded dark:border-slate-900 bg-indigo-500 dark:bg-slate-900 text-white dark:text-white hover:bg-indigo-800 dark:hover:bg-slate-800 hover:text-slate-500 dark:hover:text-sky-400 transition-colors duration-500 ease-in-out'><AiFillLinkedin size="4rem"/></a></li>
                     
                     {/* Language dropdown */}
                     <li className='w-full mb-2'>
@@ -96,7 +96,7 @@ function Modal({ visible = false, setIsVisible, theme, handleThemeSwitch }) {
                                 e.stopPropagation();
                                 handleThemeSwitch();
                             }}
-                            className="w-full border-slate-800 rounded dark:border-orange-300 flex justify-center py-4 bg-slate-800 dark:bg-orange-300 hover:bg-slate-500 dark:hover:bg-sky-400 text-lg"
+                            className="w-full border-slate-800 rounded dark:border-orange-300 flex justify-center py-4 bg-slate-800 dark:bg-orange-300 hover:bg-slate-500 dark:hover:bg-sky-400 text-lg transition-colors duration-500 ease-in-out"
                         >
                                 {theme === 'dark' ? sun : moon}
                         </button>

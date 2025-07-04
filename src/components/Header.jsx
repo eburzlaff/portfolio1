@@ -74,11 +74,11 @@ function Header({theme, handleThemeSwitch}) {
                     <li className='mr-12 hover:text-indigo-500 dark:hover:text-sky-400'><a href="#contact">{t('nav.contact')}</a></li>
                     <li className='mr-4 text-indigo-500 dark:text-white hover:text-slate-500 dark:hover:text-sky-400'><a href="https://github.com/eburzlaff" target='_blank'><AiFillGithub size="32px"/></a></li>
                     <li className='mr-4 text-indigo-500 dark:text-white hover:text-slate-500  dark:hover:text-sky-400'><a href="https://www.linkedin.com/in/eblrb" target='_blank'><AiFillLinkedin size="32px"/></a></li>
-                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400'>
+                    <li className='mr-4 hover:text-indigo-500 dark:hover:text-sky-400 '>
                         <button 
                             type="button" 
                             onClick={handleThemeSwitch} 
-                            className="bg-slate-800 dark:bg-orange-300 hover:bg-slate-500 dark:hover:bg-sky-400 text-lg p-2 rounded-md"
+                            className="bg-slate-800 dark:bg-orange-300 hover:bg-slate-500 dark:hover:bg-sky-400 text-lg p-2 rounded-md transition-colors duration-500 ease-in-out"
                         >
                                 {theme === 'dark' ? sun : moon}
                         </button>
@@ -102,7 +102,7 @@ function Header({theme, handleThemeSwitch}) {
                 </button>
             </div> 
         </div>
-        {isVisible && <Modal visible={isVisible} setIsVisible={setIsVisible} theme={theme} handleThemeSwitch={handleThemeSwitch} />}
+        <Modal visible={isVisible} setIsVisible={setIsVisible} theme={theme} handleThemeSwitch={handleThemeSwitch} />
         </>
     );
 }

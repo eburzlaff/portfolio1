@@ -23,9 +23,9 @@ function ProjectCard({title, description, image, technologies, buttons, id}) {
                         ))}
                         
                     </div>
-                    <div className='pb-4 flex flex-col sm:flex-row'>
+                    <div className='pb-4 flex flex-col sm:flex-row '>
                         {buttons.map(button => (
-                            <a href={button.link} target="_blank" className='px-6 py-4 mt-4 bg-indigo-500 hover:bg-indigo-800 dark:bg-sky-500 dark:hover:bg-sky-800 text-white text-center font-bold rounded-md ml-4'>
+                            <a href={button.link} target="_blank" className='px-6 py-4 mt-4 bg-indigo-500 hover:bg-indigo-800 dark:bg-sky-500 dark:hover:bg-sky-800 text-white text-center font-bold rounded-md ml-4 transition-colors duration-500 ease-in-out'>
                                 {button.text} 
                             </a>
                         ))}
